@@ -10,8 +10,7 @@ import UIKit
 
 let citiesList: [CityModelData] = load("city.list.json")
 
-let temp3 = "https://infotech.gov.ua/storage/img/Temp3.png"
-let temp1 = "https://infotech.gov.ua/storage/img/Temp1.png"
+
 
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {

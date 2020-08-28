@@ -10,23 +10,16 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
+    let temp3 = "https://infotech.gov.ua/storage/img/Temp3.png"
+    let temp1 = "https://infotech.gov.ua/storage/img/Temp1.png"
 
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
-
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return citiesList.count
@@ -37,14 +30,14 @@ class MainTableViewController: UITableViewController {
 
         cell.textLabel?.text = citiesList[indexPath.row].name
         if indexPath.row % 2 == 0 {
-            cell.imageView?.image = UIImage(named: "Temp3")
+           cell.imageView?.loadImage(urlString: temp3)
+          
         } else{
-            cell.imageView?.image = UIImage(named: "Temp1")
+           cell.imageView?.loadImage(urlString: temp1)
+            
+            
         }
-       
-        cell.imageView?.layer.cornerRadius = 10
-        cell.imageView?.clipsToBounds = true
-        
+
         return cell
     }
     
