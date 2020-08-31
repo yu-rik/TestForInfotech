@@ -9,7 +9,7 @@
 import UIKit
 
 
-/*
+
 class DownLoadCashe {
     
      var imageCache = NSCache<NSString, UIImage>()
@@ -41,8 +41,10 @@ class DownLoadCashe {
         }
     }
 }
-*/
 
+
+
+/*
 var imageCache = NSCache<AnyObject, AnyObject>()
 extension UIImageView {
     func loadImage(urlString: String){
@@ -65,3 +67,4 @@ extension UIImageView {
         }
     }
 }
+*/
