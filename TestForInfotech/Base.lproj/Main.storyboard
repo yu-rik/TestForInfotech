@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,8 +24,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xy-qC-ltu">
-                                            <rect key="frame" x="124" y="35.333333333333336" width="235" height="29.333333333333336"/>
-                                            <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="23"/>
+                                            <rect key="frame" x="124" y="31.666666666666671" width="235" height="37"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -50,6 +51,7 @@
                                 <connections>
                                     <outlet property="imageOutlet" destination="obh-8P-ohF" id="sba-ZD-Mka"/>
                                     <outlet property="textOutletLB" destination="3Xy-qC-ltu" id="fJv-mZ-MxB"/>
+                                    <segue destination="2Ap-mt-oJp" kind="show" identifier="DetailViewController" id="AzV-hD-DMF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -64,6 +66,204 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gew-ap-vXD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005.6" y="141.87192118226602"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="wIo-VT-keV">
+            <objects>
+                <viewController id="2Ap-mt-oJp" customClass="DetailViewController" customModule="TestForInfotech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7b-j2-OrZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aAA-oH-J3Q">
+                                <rect key="frame" x="0.0" y="88" width="375" height="320"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZJR-Kp-N6J">
+                                <rect key="frame" x="8" y="416" width="359" height="362"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-bt-YXd">
+                                        <rect key="frame" x="108.33333333333333" y="0.0" width="142.33333333333337" height="51.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="місто: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTQ-Oa-oPA">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="51.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-ug-ejq">
+                                                <rect key="frame" x="99.666666666666671" y="0.0" width="42.666666666666671" height="51.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.moon.rain.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="efb-gy-eq7">
+                                        <rect key="frame" x="154" y="51.666666666666679" width="51" height="54.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="efb-gy-eq7" secondAttribute="height" multiplier="50:51" id="Lqa-Ic-SNI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fnW-YG-GVp">
+                                        <rect key="frame" x="149" y="103.33333333333339" width="61.333333333333343" height="51.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQo-nk-pwa">
+                                                <rect key="frame" x="0.0" y="0.0" width="30.666666666666668" height="51.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ºC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itp-kg-zIq">
+                                                <rect key="frame" x="38.666666666666657" y="0.0" width="22.666666666666671" height="51.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bhq-wD-Yqx">
+                                        <rect key="frame" x="115" y="155" width="129" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="мін. темп. :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHg-OD-ohS">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.333333333333329" height="52"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Z1x-8C-NAg">
+                                                <rect key="frame" x="92.333333333333343" y="0.0" width="36.666666666666657" height="52"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7s-4s-n0r">
+                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="52"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ºC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwm-jO-SSQ">
+                                                        <rect key="frame" x="19" y="0.0" width="17.666666666666671" height="52"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1be-y7-c3a">
+                                        <rect key="frame" x="110.33333333333333" y="207" width="138.66666666666669" height="51.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="макс. темп. :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiu-tq-OdY">
+                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="51.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cTY-Aw-wj9">
+                                                <rect key="frame" x="105.66666666666667" y="0.0" width="33.000000000000014" height="51.666666666666664"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxm-S0-uy0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12.333333333333334" height="51.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ºC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7i-Bd-tul">
+                                                        <rect key="frame" x="15.333333333333345" y="0.0" width="17.666666666666671" height="51.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="X5U-ks-fTc">
+                                        <rect key="frame" x="89.666666666666686" y="258.66666666666663" width="180" height="51.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вологість повітря:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53s-LV-2iz">
+                                                <rect key="frame" x="0.0" y="0.0" width="133" height="51.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Pb5-Kz-naq">
+                                                <rect key="frame" x="149" y="0.0" width="31" height="51.666666666666664"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-DP-Enw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12.333333333333334" height="51.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-cu-SDR">
+                                                        <rect key="frame" x="16.333333333333343" y="0.0" width="14.666666666666664" height="51.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="p4T-zy-wzI">
+                                        <rect key="frame" x="87" y="310.33333333333337" width="185" height="51.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Швидкість вітру:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfa-8b-sa6">
+                                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="51.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w88-5v-Peq">
+                                                <rect key="frame" x="139.33333333333334" y="0.0" width="45.666666666666657" height="51.666666666666664"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwW-KM-wrX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12.333333333333334" height="51.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="м/с" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ys-St-xpe">
+                                                        <rect key="frame" x="17.333333333333314" y="0.0" width="28.333333333333329" height="51.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZJR-Kp-N6J" firstAttribute="leading" secondItem="ptF-ig-uYN" secondAttribute="leading" constant="8" id="0iH-sd-PkS"/>
+                            <constraint firstItem="ZJR-Kp-N6J" firstAttribute="centerX" secondItem="q7b-j2-OrZ" secondAttribute="centerX" id="1UJ-g1-ykK"/>
+                            <constraint firstItem="aAA-oH-J3Q" firstAttribute="trailing" secondItem="ptF-ig-uYN" secondAttribute="trailing" id="A83-e3-Z5n"/>
+                            <constraint firstItem="aAA-oH-J3Q" firstAttribute="top" secondItem="ptF-ig-uYN" secondAttribute="top" id="AvK-3c-cG5"/>
+                            <constraint firstItem="aAA-oH-J3Q" firstAttribute="leading" secondItem="ptF-ig-uYN" secondAttribute="leading" id="CoQ-Xx-Zgx"/>
+                            <constraint firstItem="ptF-ig-uYN" firstAttribute="trailing" secondItem="ZJR-Kp-N6J" secondAttribute="trailing" constant="8" id="IMu-Cu-W82"/>
+                            <constraint firstItem="aAA-oH-J3Q" firstAttribute="height" secondItem="q7b-j2-OrZ" secondAttribute="height" multiplier="0.394089" id="W0N-HK-mqw"/>
+                            <constraint firstItem="ZJR-Kp-N6J" firstAttribute="top" secondItem="aAA-oH-J3Q" secondAttribute="bottom" constant="8" id="ec4-zd-vvx"/>
+                            <constraint firstItem="ptF-ig-uYN" firstAttribute="bottom" secondItem="ZJR-Kp-N6J" secondAttribute="bottom" id="kPj-CP-yBL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ptF-ig-uYN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="009-We-JxX"/>
+                    <connections>
+                        <outlet property="cityNameLB" destination="wYT-ug-ejq" id="saX-c6-ia7"/>
+                        <outlet property="currentTemperatureLB" destination="VQo-nk-pwa" id="VYn-7j-tTW"/>
+                        <outlet property="descriptionImage" destination="efb-gy-eq7" id="wks-Md-tLM"/>
+                        <outlet property="humidityLB" destination="Ppf-DP-Enw" id="eAF-ZF-BXk"/>
+                        <outlet property="maxTemperatureLB" destination="vxm-S0-uy0" id="d8W-fh-oOB"/>
+                        <outlet property="minTemperatureLB" destination="d7s-4s-n0r" id="pIQ-Lk-aKY"/>
+                        <outlet property="windSpeedLB" destination="jwW-KM-wrX" id="paU-lI-nj1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxr-4p-Q72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794.4000000000001" y="141.87192118226602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MBo-KU-4KV">
@@ -82,4 +282,7 @@
             <point key="canvasLocation" x="87" y="142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloud.moon.rain.fill" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
