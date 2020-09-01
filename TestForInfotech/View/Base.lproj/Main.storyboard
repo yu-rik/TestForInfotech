@@ -82,16 +82,16 @@
                                 <rect key="frame" x="8" y="416" width="359" height="362"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-bt-YXd">
-                                        <rect key="frame" x="108.33333333333333" y="0.0" width="142.33333333333337" height="51.666666666666664"/>
+                                        <rect key="frame" x="91.333333333333329" y="0.0" width="176.33333333333337" height="51.666666666666664"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="місто: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTQ-Oa-oPA">
-                                                <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="51.666666666666664"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="опис: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTQ-Oa-oPA">
+                                                <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="51.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-ug-ejq">
-                                                <rect key="frame" x="99.666666666666671" y="0.0" width="42.666666666666671" height="51.666666666666664"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-ug-ejq">
+                                                <rect key="frame" x="94.666666666666657" y="0.0" width="81.666666666666657" height="51.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -252,9 +252,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="009-We-JxX"/>
                     <connections>
-                        <outlet property="cityNameLB" destination="wYT-ug-ejq" id="saX-c6-ia7"/>
                         <outlet property="currentTemperatureLB" destination="VQo-nk-pwa" id="VYn-7j-tTW"/>
                         <outlet property="descriptionImage" destination="efb-gy-eq7" id="wks-Md-tLM"/>
+                        <outlet property="descriptionLB" destination="wYT-ug-ejq" id="gnY-xo-5wI"/>
                         <outlet property="humidityLB" destination="Ppf-DP-Enw" id="eAF-ZF-BXk"/>
                         <outlet property="maxTemperatureLB" destination="vxm-S0-uy0" id="d8W-fh-oOB"/>
                         <outlet property="minTemperatureLB" destination="d7s-4s-n0r" id="pIQ-Lk-aKY"/>

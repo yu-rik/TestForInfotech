@@ -10,9 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var currentCity: CityModelData?
-    @IBOutlet weak var cityNameLB: UILabel!
+    let managerJsonData = ManagerJsonData()
     
     //outlets for API
+    @IBOutlet weak var descriptionLB: UILabel!
     @IBOutlet weak var descriptionImage: UIImageView!
     @IBOutlet weak var currentTemperatureLB: UILabel!
     @IBOutlet weak var minTemperatureLB: UILabel!
@@ -20,14 +21,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var humidityLB: UILabel!
     @IBOutlet weak var windSpeedLB: UILabel!
     
-    
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = currentCity?.name
-        cityNameLB.text = currentCity?.name
+        guard let lat = currentCity?.coord.lat else {return}
+        guard let lon = currentCity?.coord.lon else {return}
         
+        managerJsonData.downloadJsonData(latitude: lat, longitude: lon)
+
     }
     
 

@@ -14,6 +14,9 @@
 		7A7B6AAE24F8ED1800A8A91F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B6AAC24F8ED1800A8A91F /* LaunchScreen.storyboard */; };
 		7A7B6AB624F8F4F800A8A91F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B6AB524F8F4F800A8A91F /* MainTableViewController.swift */; };
 		7A89BDB324FCEE4500161328 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89BDB224FCEE4500161328 /* CustomCell.swift */; };
+		7A8C1D0F24FE6DD80051E630 /* ManagerJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C1D0E24FE6DD80051E630 /* ManagerJsonData.swift */; };
+		7A8C1D1124FE722A0051E630 /* apiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C1D1024FE722A0051E630 /* apiKey.swift */; };
+		7A8C1D1324FE75F50051E630 /* WeatherJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C1D1224FE75F50051E630 /* WeatherJsonData.swift */; };
 		7A9AA6A324F91FB400B3B5FF /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A9AA6A224F91FB400B3B5FF /* city.list.json */; };
 		7AA754D424FDA60F00FC9859 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA754D324FDA60F00FC9859 /* DetailViewController.swift */; };
 		7AC7567A24F94D1400E3D58D /* CityModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7567924F94D1400E3D58D /* CityModelData.swift */; };
@@ -31,6 +34,9 @@
 		7A7B6AAF24F8ED1800A8A91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A7B6AB524F8F4F800A8A91F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		7A89BDB224FCEE4500161328 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		7A8C1D0E24FE6DD80051E630 /* ManagerJsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerJsonData.swift; sourceTree = "<group>"; };
+		7A8C1D1024FE722A0051E630 /* apiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiKey.swift; sourceTree = "<group>"; };
+		7A8C1D1224FE75F50051E630 /* WeatherJsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherJsonData.swift; sourceTree = "<group>"; };
 		7A9AA6A224F91FB400B3B5FF /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.list.json; sourceTree = "<group>"; };
 		7AA754D324FDA60F00FC9859 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7AC7567924F94D1400E3D58D /* CityModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModelData.swift; sourceTree = "<group>"; };
@@ -68,21 +74,72 @@
 		7A7B6AA024F8ED1800A8A91F /* TestForInfotech */ = {
 			isa = PBXGroup;
 			children = (
+				7A8C1D0924FE6A890051E630 /* SupportFiles */,
+				7A8C1D0C24FE6C8B0051E630 /* ViewControllers */,
+				7A8C1D0824FE6A250051E630 /* Models */,
+				7A8C1D0B24FE6C560051E630 /* ManagerDownloadMethods */,
+				7A8C1D0A24FE6B2F0051E630 /* Constants */,
+				7A8C1D0D24FE6CEF0051E630 /* View */,
+			);
+			path = TestForInfotech;
+			sourceTree = "<group>";
+		};
+		7A8C1D0824FE6A250051E630 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7AC7567924F94D1400E3D58D /* CityModelData.swift */,
+				7A8C1D1224FE75F50051E630 /* WeatherJsonData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A8C1D0924FE6A890051E630 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
 				7A7B6AA124F8ED1800A8A91F /* AppDelegate.swift */,
 				7A7B6AA324F8ED1800A8A91F /* SceneDelegate.swift */,
-				7A7B6AB524F8F4F800A8A91F /* MainTableViewController.swift */,
-				7AA754D324FDA60F00FC9859 /* DetailViewController.swift */,
-				7A89BDB224FCEE4500161328 /* CustomCell.swift */,
-				7AC7567D24F99DB600E3D58D /* DownLoadCashe.swift */,
-				7AC7567924F94D1400E3D58D /* CityModelData.swift */,
-				7AC7567B24F95C1C00E3D58D /* DecodingData.swift */,
-				7A9AA6A224F91FB400B3B5FF /* city.list.json */,
-				7A7B6AA724F8ED1800A8A91F /* Main.storyboard */,
 				7A7B6AAA24F8ED1800A8A91F /* Assets.xcassets */,
 				7A7B6AAC24F8ED1800A8A91F /* LaunchScreen.storyboard */,
 				7A7B6AAF24F8ED1800A8A91F /* Info.plist */,
 			);
-			path = TestForInfotech;
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		7A8C1D0A24FE6B2F0051E630 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7A9AA6A224F91FB400B3B5FF /* city.list.json */,
+				7A8C1D1024FE722A0051E630 /* apiKey.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		7A8C1D0B24FE6C560051E630 /* ManagerDownloadMethods */ = {
+			isa = PBXGroup;
+			children = (
+				7AC7567D24F99DB600E3D58D /* DownLoadCashe.swift */,
+				7AC7567B24F95C1C00E3D58D /* DecodingData.swift */,
+				7A8C1D0E24FE6DD80051E630 /* ManagerJsonData.swift */,
+			);
+			path = ManagerDownloadMethods;
+			sourceTree = "<group>";
+		};
+		7A8C1D0C24FE6C8B0051E630 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A7B6AB524F8F4F800A8A91F /* MainTableViewController.swift */,
+				7AA754D324FDA60F00FC9859 /* DetailViewController.swift */,
+				7A89BDB224FCEE4500161328 /* CustomCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7A8C1D0D24FE6CEF0051E630 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A7B6AA724F8ED1800A8A91F /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,14 +214,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8C1D0F24FE6DD80051E630 /* ManagerJsonData.swift in Sources */,
 				7A7B6AA224F8ED1800A8A91F /* AppDelegate.swift in Sources */,
 				7A7B6AB624F8F4F800A8A91F /* MainTableViewController.swift in Sources */,
 				7AC7567E24F99DB600E3D58D /* DownLoadCashe.swift in Sources */,
 				7AC7567A24F94D1400E3D58D /* CityModelData.swift in Sources */,
 				7A7B6AA424F8ED1800A8A91F /* SceneDelegate.swift in Sources */,
+				7A8C1D1124FE722A0051E630 /* apiKey.swift in Sources */,
 				7A89BDB324FCEE4500161328 /* CustomCell.swift in Sources */,
 				7AC7567C24F95C1C00E3D58D /* DecodingData.swift in Sources */,
 				7AA754D424FDA60F00FC9859 /* DetailViewController.swift in Sources */,
+				7A8C1D1324FE75F50051E630 /* WeatherJsonData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 754JYM9F2Z;
-				INFOPLIST_FILE = TestForInfotech/Info.plist;
+				INFOPLIST_FILE = TestForInfotech/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 754JYM9F2Z;
-				INFOPLIST_FILE = TestForInfotech/Info.plist;
+				INFOPLIST_FILE = TestForInfotech/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
