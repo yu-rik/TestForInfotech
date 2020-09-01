@@ -35,6 +35,8 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
         
         guard let urlString1 = URL(string: temp1), let urlString3 = URL(string: temp3) else {return}
         
@@ -83,8 +85,6 @@ class MainTableViewController: UITableViewController {
         let correctCity = cityToDisplay(indexPath: indexPath)
         cell.textOutletLB.text = "\(indexPath.row+1). місто:  " + correctCity.name
 
-        
-       // cell.textOutletLB.text = "\(indexPath.row+1). місто:  " + citiesList[indexPath.row].name
                  
         if indexPath.row % 2 == 0 {
             cell.imageOutlet.image = image1
@@ -151,8 +151,8 @@ class MainTableViewController: UITableViewController {
         if segue.identifier == "DetailViewController" {
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
                 let detailVC = segue.destination as! DetailViewController
-            detailVC.currentCity = citiesList[indexPath.row]
-            
+            detailVC.currentCity = cityToDisplay(indexPath: indexPath)
+          
         }
     }
     

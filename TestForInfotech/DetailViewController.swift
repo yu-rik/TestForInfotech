@@ -25,8 +25,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = currentCity?.name
         cityNameLB.text = currentCity?.name
+        
     }
     
 
