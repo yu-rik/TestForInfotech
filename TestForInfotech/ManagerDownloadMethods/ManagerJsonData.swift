@@ -15,25 +15,25 @@ class ManagerJsonData {
     let session = URLSession(configuration: .default)
     let task = session.dataTask(with: url) { (data, response, error) in
         if let data = data {
-            self.parseJSON(withData: data)
+            let weatherForDisplay = self.parseJSON(withData: data)
         }
     }
     task.resume()
 }
     
-   func parseJSON(withData data: Data) {
+    func parseJSON(withData data: Data) -> WeatherDataForDisplay? {
         let decoder = JSONDecoder()//создаем декодер для декодирования данных из json формата
         do {
             let weatherJsonData = try decoder.decode(WeatherJsonData.self, from: data)
-            print(weatherJsonData.weather[0].description)
-            //создаем объект CurrentWeather
-          //  guard let weatherForDisplay = CurrentWeather(currentWeatherData: currentWeatherData) else {return nil}
-         //   return currentWeather
+            //print(weatherJsonData.weather[0].description)
+            //создаем объект weatherForDisplay
+            guard let weatherForDisplay = WeatherDataForDisplay(weatherJsonData: weatherJsonData) else {return nil}
+            return weatherForDisplay
             
             //  print(currentWeatherData.main.temp)
         } catch let error as NSError {
             print(error.localizedDescription)
         }
-      //  return nil
+        return nil
     }
 }
