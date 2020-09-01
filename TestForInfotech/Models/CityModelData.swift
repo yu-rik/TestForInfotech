@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//модель для городов файла city.list.json
 struct CityModelData: Codable {
     let id: Int
     let name: String

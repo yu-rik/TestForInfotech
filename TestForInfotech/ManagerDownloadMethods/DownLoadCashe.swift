@@ -44,7 +44,7 @@ class DownLoadCashe {
 
 
 
-/*
+/* Второй вариант для загрузки изображений в Cache
 var imageCache = NSCache<AnyObject, AnyObject>()
 extension UIImageView {
     func loadImage(urlString: String){

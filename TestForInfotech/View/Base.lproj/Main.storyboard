@@ -256,6 +256,7 @@
                         <outlet property="descriptionImage" destination="efb-gy-eq7" id="wks-Md-tLM"/>
                         <outlet property="descriptionLB" destination="wYT-ug-ejq" id="gnY-xo-5wI"/>
                         <outlet property="humidityLB" destination="Ppf-DP-Enw" id="eAF-ZF-BXk"/>
+                        <outlet property="mapViewOutlet" destination="aAA-oH-J3Q" id="eeF-fE-51c"/>
                         <outlet property="maxTemperatureLB" destination="vxm-S0-uy0" id="d8W-fh-oOB"/>
                         <outlet property="minTemperatureLB" destination="d7s-4s-n0r" id="pIQ-Lk-aKY"/>
                         <outlet property="windSpeedLB" destination="jwW-KM-wrX" id="paU-lI-nj1"/>

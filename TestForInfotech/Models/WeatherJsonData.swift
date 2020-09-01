@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//модель для json с OpenWeather
 struct WeatherJsonData: Codable {
     let weather: [Weather]
     let main: Main

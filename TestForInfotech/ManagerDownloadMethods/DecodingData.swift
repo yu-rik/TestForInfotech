@@ -11,7 +11,7 @@ import UIKit
 let citiesList: [CityModelData] = load("city.list.json")
 
 
-
+//декодировка json - данных city.list.json в массив типа модели CityModelData
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
     let data: Data

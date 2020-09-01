@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// Работа с API сайта OpenWeather
 class ManagerJsonData {
     
      //передача данных через closure созданный как свойство

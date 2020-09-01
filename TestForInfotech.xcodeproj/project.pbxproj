@@ -23,6 +23,7 @@
 		7AC7567A24F94D1400E3D58D /* CityModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7567924F94D1400E3D58D /* CityModelData.swift */; };
 		7AC7567C24F95C1C00E3D58D /* DecodingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7567B24F95C1C00E3D58D /* DecodingData.swift */; };
 		7AC7567E24F99DB600E3D58D /* DownLoadCashe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7567D24F99DB600E3D58D /* DownLoadCashe.swift */; };
+		7AFF8C5524FEAC1000C5C631 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFF8C5424FEAC1000C5C631 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7AC7567924F94D1400E3D58D /* CityModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModelData.swift; sourceTree = "<group>"; };
 		7AC7567B24F95C1C00E3D58D /* DecodingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingData.swift; sourceTree = "<group>"; };
 		7AC7567D24F99DB600E3D58D /* DownLoadCashe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownLoadCashe.swift; sourceTree = "<group>"; };
+		7AFF8C5424FEAC1000C5C631 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFF8C5524FEAC1000C5C631 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 			children = (
 				7A7B6AA024F8ED1800A8A91F /* TestForInfotech */,
 				7A7B6A9F24F8ED1800A8A91F /* Products */,
+				7AFF8C5324FEAC1000C5C631 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +147,14 @@
 				7A7B6AA724F8ED1800A8A91F /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7AFF8C5324FEAC1000C5C631 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AFF8C5424FEAC1000C5C631 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
