@@ -11,24 +11,53 @@ import UIKit
 struct WeatherDataForDisplay {
     let descript: String
     
-    let temperature: Double
+   fileprivate let temperature: Double
     var tempString: String {
         return String(format: "%.0f", temperature)
     }
     
-    let minTemperature: Double
-    var mitTempString: String {
+    fileprivate let minTemperature: Double
+    var minTempString: String {
         return String(format: "%.0f", minTemperature)
     }
     
-    let maxTemperature: Double
+   fileprivate let maxTemperature: Double
     var maxTempString: String {
         return String(format: "%.0f", maxTemperature)
     }
     
-    let humid: Int
-    let wind: Double
-    let conditionCode: Int
+   fileprivate let humid: Int
+    var humidString: String {
+        return String(humid)
+    }
+    
+    fileprivate let wind: Double
+    var windString: String {
+        return String(format: "%.1f", wind)
+    }
+    
+    fileprivate let conditionCode: Int
+    var systemWeatherIcon: String {
+           switch conditionCode {
+           case 200...232:
+               return "cloud.bolt.rain.fill"
+           case 300...321:
+               return "cloud.drizzle.fill"
+           case 500...531:
+               return "cloud.rain.fill"
+           case 600...622:
+               return "cloud.snow.fill"
+           case 701...781:
+               return "tornado"
+           case 800:
+               return "sun.max.fill"
+           case 801...804:
+               return "cloud.fill"
+               
+           default:
+               return "nosign"
+           }
+       }
     
     
     //инициализатор для создания объекта WeatherDataForDisplay с полученных данных объекта WeatherJsonData

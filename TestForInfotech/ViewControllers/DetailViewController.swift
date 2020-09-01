@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var currentCity: CityModelData?
-    let managerJsonData = ManagerJsonData()
+    var managerJsonData = ManagerJsonData()
     
     //outlets for API
     @IBOutlet weak var descriptionLB: UILabel!
@@ -30,10 +30,26 @@ class DetailViewController: UIViewController {
         guard let lat = currentCity?.coord.lat else {return}
         guard let lon = currentCity?.coord.lon else {return}
         
+        managerJsonData.onCompletion = {[weak self] weatherForDisplay in
+            guard let self = self else {return}
+            self.updateDisplay(weatherForDisplay: weatherForDisplay)
+            
+        }
         managerJsonData.downloadJsonData(latitude: lat, longitude: lon)
 
     }
     
+    func updateDisplay(weatherForDisplay: WeatherDataForDisplay) {
+        DispatchQueue.main.async {
+            self.descriptionLB.text = weatherForDisplay.descript
+            self.descriptionImage.image = UIImage(systemName: weatherForDisplay.systemWeatherIcon)
+            self.currentTemperatureLB.text = weatherForDisplay.tempString
+            self.minTemperatureLB.text = weatherForDisplay.minTempString
+            self.maxTemperatureLB.text = weatherForDisplay.maxTempString
+            self.humidityLB.text = weatherForDisplay.humidString
+            self.windSpeedLB.text = weatherForDisplay.windString
+        }
+    }
 
     /*
     // MARK: - Navigation
